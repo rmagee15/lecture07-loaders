@@ -10,6 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@android:drawable/ic_menu_search"
+        android:contentDescription="A button that searches for the movie you put into the text box."
         />
     <EditText
         android:id="@+id/txtMovieSearch"
@@ -17,15 +18,22 @@
         android:layout_height="wrap_content"
         android:hint="Movie title..."
         android:layout_centerHorizontal="true"
+        android:layout_toEndOf="@id/btnMovieSearch"
         android:layout_toRightOf="@id/btnMovieSearch"
+        android:layout_toStartOf="@+id/btnClearSearch"
         android:layout_toLeftOf="@+id/btnClearSearch"
+        android:nextFocusDown="@+id/btnMovieSearch"
+        android:nextFocusUp="@+id/btnClearSearch"
+
         />
     <ImageButton
         android:id="@+id/btnClearSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
+        android:contentDescription="A button that clears the search box."
         />
 
     <TextView
@@ -43,6 +51,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/txtMovie"
+        android:contentDescription="An image that displays the poster for the searched movie."
         />
     
 </RelativeLayout>
